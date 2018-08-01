@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Create Alert</h1>
+</div>
+<div class="form-size">
+    <form method="post">
+        <div class="form-group">
+            <label for="name">Alert/Item Name</label>
+            <input type="text" class="form-control" id="name" name="name"placeholder= "Item name">
+        </div>
+          <div class="form-group">
+            <label for="url">URL</label>
+            <input type="text" class="form-control" id="url" name="url" placeholder="http://...">
+        </div>
+          <div class="form-group">
+            <label for="price_limit">Alert Limit</label>
+            <input type="text" class="form-control" id="price_limit" name="price_limit" air-describeby="priceLimitblock" placeholder="24.5">
+              <p id="priceLimitblock" class="help-block">We'll send you an email when a price reaches under this</p>
+        </div>
+        <buttom type="submit" class="btn btn-default">create</buttom>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,5 @@
+Flask==0.10.1
+pymongo==3.03
+beautifulsoup4==4.4.1
+requests==2.19.1
+passlib==1.6.5

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="page-header">
+
+        <h1>Alerts<small>Showing already existing alerts</small></h1>
+    </div>
+    <div class="list-group">
+        {%for alert in alerts%}
+        <a href="{{url_for('alerts.get_alert_page'),alert_id=alert._id}} class='list-group-item'">
+            <h4 class="list-group-item-heading"> Alert for {{Alert.item.name}}</h4>
+            < class="list-group-item-text">Last price found<strong> {{alert.item.price}}</strong><br/>
+        Last checked on {{alert.last_checked.strftime<strong>("%d-%m-%y at %H%M")}}</strong>/p>
+        </a>
+        {%endfor %}
+    </div>
+<a href="{{url_for('alert.create_alert')}}" class="btn btn-success"><span class="glyphicon glyphcion-plus"></span>Create new</a>
+
+
+{% endblock %}
